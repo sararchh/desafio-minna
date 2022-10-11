@@ -24,37 +24,20 @@ export const ContentInfo = styled.div`
   }
 `;
 
-export const ButtonRegister = styled.button`
-  height: 50px;
-  width: 157px;
 
-  border-radius: 50px;
-  background: var(--orange);
-  border: 2px solid #FFFFFF;
+// export const ButtonLogin = styled.button`
+//   height: 50px;
+//   width: 157px;
 
-  color: var(--white);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+//   background: #F87D50;
+//   border: 1px solid #F87D50;
 
-  margin-right: 20px;
-
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-export const ButtonLogin = styled.button`
-  height: 50px;
-  width: 157px;
-
-  background: #F87D50;
-  border: 1px solid #F87D50;
-
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
+//   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+//   border-radius: 50px;
 
   
-  color: var(--white);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-`;
+//   color: var(--white);
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 19px;
+// `;

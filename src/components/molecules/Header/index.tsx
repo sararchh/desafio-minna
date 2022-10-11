@@ -1,6 +1,7 @@
 import React from 'react';
+import  Button  from '../../atoms/Button';
 
-import { Container, ContentInfo, ButtonRegister, ButtonLogin } from './styles';
+import { Container, ContentInfo, } from './styles';
 
 const Header: React.FC = () => {
   return (
@@ -15,8 +16,16 @@ const Header: React.FC = () => {
       </ContentInfo>
 
       <div>
-        <ButtonRegister>Inscreva-se</ButtonRegister>
-        <ButtonLogin>Login</ButtonLogin>
+
+        <Button
+        text='Inscreva-se'
+        borderColor='#FFFFFF' 
+        />
+
+        <Button
+        text='Login'
+        />
+
       </div>
     </Container>
   )
