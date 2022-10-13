@@ -175,7 +175,7 @@ function Home() {
                 ))}
               </ContainerDiet>
 
-              <ImgElement05 src='/assets/Adorno02.svg' alt='Comidas' />
+              <ImgElement05 src='/assets/diet01.svg' alt='Comidas' />
             </CardComponent>
 
           </form>
