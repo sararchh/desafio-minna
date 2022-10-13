@@ -12,9 +12,9 @@ export const ImgElement01 = styled.img`
   width: 782px;
 
   z-index: -1;
-  position: fixed;
+  position: absolute;
   top: -200px;
-  right: -60px;
+  right: -271px;
 `;
 
 export const Content = styled.div`
@@ -28,7 +28,8 @@ export const Content = styled.div`
     position: relative;
     
     .section01 {
-      width: 100%;
+      max-width: 100vw;
+      width: 100vw;
       height: 370px;
     }
     
@@ -50,7 +51,8 @@ export const ContentStartNow = styled.div`
 `;
 
 export const Section02 = styled.div`
-  width: 100%;
+  max-width: 100vw;
+  width: 100vw;
   height: auto;
 
   display: flex;
@@ -61,14 +63,45 @@ export const Section02 = styled.div`
 export const ImgElement02 = styled.img`
   z-index: 1;
 
-  position: fixed;
-  margin-top: -250px;
-  right: -20px;
+  position: absolute;
+  margin-top: -503px;
+  right: -437px;
+`;
+
+export const ImgElement03 = styled.img`
+  z-index: 1;
+
+  top: -127px;
+  position: absolute;
+  left: -150px;
+`;
+
+export const ImgElement05 = styled.img`
+  z-index: 1;
+  
+  top: 158px;
+  position: absolute;
+  right: -441px;
+`;
+
+export const ImgElement04 = styled.img`
+    z-index: -1;
+
+    position: absolute;
+    top: -134px;
+    left: -457px;
 `;
 
 export const Title01 = styled.h1`
   font-size: 25px;
   font-weight: 700;
+  line-height: 30px;
+`;
+
+export const Title02 = styled.h1`
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
   line-height: 30px;
 `;
 
@@ -105,7 +138,6 @@ export const LabelStyled = styled.label`
   font-weight: 800;
   line-height: 20px;
   margin: 5px;
-
 `;
 
 export const SelectStyled = styled.select`
@@ -127,9 +159,18 @@ export const SelectStyled = styled.select`
 
   option {
     color: var(--gray);
-    font-weight: 800;
+    font-weight: 300;
     font-size: 16px;
     line-height: 20px;
   }
+
+`;
+
+export const ContainerDiet =  styled.div`
+  width: 466px;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
 
 `;

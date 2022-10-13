@@ -2,7 +2,9 @@ import React from 'react';
 import Button from '../../components/atoms/Button';
 import InputComponent from '../../components/atoms/InputComponent';
 import CardComponent from '../../components/molecules/CardComponent';
+import CardDiet from '../../components/molecules/CardDiet';
 import Header from '../../components/molecules/Header';
+
 
 import {
   Container,
@@ -10,12 +12,56 @@ import {
   ContentStartNow,
   ImgElement01,
   ImgElement02,
+  ImgElement03,
+  ImgElement04,
+  ImgElement05,
   Section02,
   Title01,
+  Title02,
   CardUser01,
   LabelStyled,
-  SelectStyled
+  SelectStyled,
+  ContainerDiet
 } from './styles';
+
+const array = [
+  {
+    text: 'Equilibrada',
+    htmlFor: 'balanced'
+  },
+  {
+    text: 'Paleolítico',
+    htmlFor: 'paleolithic'
+  },
+  {
+    text: 'Cetogênica',
+    htmlFor: 'ketogenic'
+  },
+  {
+    text: 'Vegetariana',
+    htmlFor: 'vegetarian'
+  },
+  {
+    text: 'Jejum',
+    htmlFor: 'fast'
+  },
+  {
+    text: 'Sem Lactose',
+    htmlFor: 'lactoseFree'
+  },
+  {
+    text: 'Vegana',
+    htmlFor: 'vegan'
+  },
+  {
+    text: 'Low Carb',
+    htmlFor: 'lowCarb'
+  },
+  {
+    text: 'Sem Lactose',
+    htmlFor: 'lactoseFree2'
+  }
+]
 
 function Home() {
   return (
@@ -104,6 +150,32 @@ function Home() {
               </CardUser01>
 
 
+            </CardComponent>
+
+            <CardComponent h='186px'>
+              <Title02>Qual é o seu <br /> objetivo principal?</Title02>
+
+              <SelectStyled>
+                <option value="loseWeight">Emagrecer</option>
+                <option value="keepWeight">Manter Peso</option>
+                <option value="gainHealth">Ganhar saúde</option>
+                <option value="gainMass">Ganhar massa muscular</option>
+              </SelectStyled>
+            </CardComponent>
+
+            <CardComponent h='672px' topBackground={true} >
+              <ImgElement03 src='/assets/gluten-free1.png' alt='imagem gluten' />
+              <ImgElement04 src='/assets/v.svg' alt='imagem' />
+
+              <Title02>Qual tipo de dieta <br /> você gostaria?</Title02>
+
+              <ContainerDiet>
+                {array.map((item, index) => (
+                  <CardDiet key={index} text={item.text} htmlFor={item.htmlFor} />
+                ))}
+              </ContainerDiet>
+
+              <ImgElement05 src='/assets/Adorno02.svg' alt='Comidas' />
             </CardComponent>
 
           </form>
