@@ -86,17 +86,7 @@ export const ContentStartNow = styled.div`
 }
 `;
 
-export const Section02 = styled.div`
-  max-width: 100vw;
-  width: 100vw;
-  height: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Section03 = styled.div`
+export const SectionCard = styled.div`
   max-width: 100vw;
   width: 100vw;
   height: auto;
@@ -107,8 +97,6 @@ export const Section03 = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
-
 
 export const Title01 = styled.h1`
   font-size: 25px;
@@ -204,4 +192,41 @@ export const TextPlans = styled.p`
   padding: 15px;
 
   margin-bottom: 20px;
+`;
+
+export const ContentFooter = styled.footer`
+  width: 100%;
+  height: 687px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--white);
+
+  z-index: -1;
+
+  position: absolute;
+  top: -63px;
+  left: 0;
+`;
+
+export const CardContents = styled.div`
+  height: 99px;
+  width: 958px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+
+  border-radius: 50px;
+  background-color: var(--orange);
+
+  span {
+    top: 25px;
+    right: 29px;
+    position: absolute;
+  }
 `;

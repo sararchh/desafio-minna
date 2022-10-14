@@ -3,8 +3,8 @@ import React from 'react';
 import { LabelStyled, Input, Container } from './styles';
 
 type InputComponentProps = {
-  htmlFor: string,
-  labelName: string,
+  htmlFor?: string,
+  labelName?: string,
   type?: string,
   placeholder?: string,
   w?: string,

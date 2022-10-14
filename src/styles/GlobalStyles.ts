@@ -36,6 +36,7 @@ body{
   -webkit-font-smoothing: antialiased;
   max-width: 375px;
   width: 375px;
+  box-sizing: border-box;
 }
 
 body, input, textarea, button {

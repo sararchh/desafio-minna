@@ -16,15 +16,16 @@ import {
   ContentStartNow,
   ImgElement01,
   ImgElement,
-  Section02,
   Title01,
   Title02,
   CardUser01,
   LabelStyled,
   SelectStyled,
   ContainerDiet,
-  Section03,
   TextPlans,
+  SectionCard,
+  ContentFooter,
+  CardContents,
 } from './styles';
 
 
@@ -45,7 +46,7 @@ function Home() {
           </ContentStartNow>
         </section>
 
-        <Section02>
+        <SectionCard>
           <form>
             <CardComponent>
               <ImgElement src='/assets/kiwi-fruit1.svg' alt='ImgElement' marginTop='-503px' right='-437px' />
@@ -260,13 +261,13 @@ function Home() {
             </CardComponent>
 
           </form>
-        </Section02>
+        </SectionCard>
 
-        <Section03>
+        <SectionCard>
           <form>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-              <ImgElement src='/assets/ellipse.svg' zIndex='-1' top='-100px' left='0' />
-              {/* <ImgElement src='/assets/fruits.svg.svg' zIndex='-1' top='93px'/> */}
+              <ImgElement src='/assets/ellipse.svg' style={{ width: '100vw' }} zIndex='-1' top='-100px' left='0' />
+              <ImgElement style={{ width: '100vw' }} src='/assets/fruits.svg' zIndex='-1' top='460px' left='0' />
 
               <Title02 style={{ margin: '50px' }} color='var(--white)'>Conheça nossos planos </Title02>
 
@@ -295,7 +296,22 @@ function Home() {
 
             </div>
           </form>
-        </Section03>
+        </SectionCard>
+
+        <SectionCard>
+          <ContentFooter className='teste'>
+
+            <CardContents>
+              <Title02 size='25px' color='var(--white)'>Receba conteúdos exclusívos!</Title02>
+              <InputComponent w='451px' />
+
+              <span>
+                <Button text='Enviar'/>
+              </span>
+            </CardContents>
+
+          </ContentFooter>
+        </SectionCard>
 
       </Content>
     </Container>
