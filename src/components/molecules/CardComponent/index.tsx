@@ -7,6 +7,7 @@ type CardComponentProps = {
   h?: string;
   w?: string;
   br?: string;
+  hTop?: string;
   topBackground?: Boolean;
 }
 
@@ -17,9 +18,10 @@ const CardComponent: React.FC<CardComponentProps> = (
     w = '958px',
     topBackground = false,
     br = '50px',
+    hTop = '103px'
   }) => {
   return (
-    <Container h={h} w={w} br={br} >
+    <Container h={h} w={w} br={br} hTop={hTop}>
       {topBackground && (
         <div className='topBackground' />
       )}

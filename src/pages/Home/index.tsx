@@ -6,6 +6,7 @@ import CardComponent from '../../components/molecules/CardComponent';
 import CardDiet from '../../components/molecules/CardDiet';
 import Header from '../../components/molecules/Header';
 import { array } from '../../utils/arrayDiet';
+import { arrayPlans } from '../../utils/arrayPlans';
 import { arrayRestrictionDiet } from '../../utils/arrayRestrictionDiet';
 
 
@@ -22,6 +23,8 @@ import {
   LabelStyled,
   SelectStyled,
   ContainerDiet,
+  Section03,
+  TextPlans,
 } from './styles';
 
 
@@ -135,7 +138,7 @@ function Home() {
 
             <CardComponent h='672px' topBackground={true} >
               <ImgElement src='/assets/gluten-free1.png' alt='imagem gluten' top='-127px' left='-150px' />
-              <ImgElement src='/assets/v.svg' alt='imagem' zIndex='-1' top='-134px' left='-457px'/>
+              <ImgElement src='/assets/v.svg' alt='imagem' zIndex='-1' top='-134px' left='-457px' />
 
               <Title02>Qual tipo de dieta <br /> você gostaria?</Title02>
 
@@ -149,7 +152,7 @@ function Home() {
             </CardComponent>
 
             <CardComponent h='201px'>
-              <ImgElement src='/assets/cogumelos.svg' alt='imagem cogumelo' top='86px' left='-361px' zIndex='0'/>
+              <ImgElement src='/assets/cogumelos.svg' alt='imagem cogumelo' top='86px' left='-361px' zIndex='0' />
               <div style={{ width: '40%' }}>
                 <Title02>Quantas refeições <br /> você faz ao dia?</Title02>
               </div>
@@ -164,7 +167,7 @@ function Home() {
             </CardComponent>
 
             <CardComponent h='460px'>
-              <ImgElement src='/assets/tomato.svg' alt='imagem tomate' zIndex='0' top='29px' left='-457px'/>
+              <ImgElement src='/assets/tomato.svg' alt='imagem tomate' zIndex='0' top='29px' left='-457px' />
               <ImgElement src='/assets/ingredients.svg' alt='imagem ingredientes' zIndex='-1' top='271px' right='-439px' />
 
               <div style={{ width: '40%' }}>
@@ -196,12 +199,12 @@ function Home() {
                 <CardSelect w='284px' text='Gosto de cozinhar' htmlFor='preparation2' margin='10px 100px 0 0' />
               </div>
 
-              <ImgElement src='/assets/elemento1.svg' alt='imagem elemento 01' top='74px' right='29px' zIndex='0'/>
+              <ImgElement src='/assets/elemento1.svg' alt='imagem elemento 01' top='74px' right='29px' zIndex='0' />
             </CardComponent>
 
             <CardComponent h='258px'>
-              <ImgElement src='/assets/pizza.svg' alt='imagem elemento 01' top='74px' left='-457px' zIndex='0'/>
-              <ImgElement src='/assets/m.svg' alt='imagem elemento 01' zIndex='-1' top='74px' right='-438px'/>
+              <ImgElement src='/assets/pizza.svg' alt='imagem elemento 01' top='74px' left='-457px' zIndex='0' />
+              <ImgElement src='/assets/m.svg' alt='imagem elemento 01' zIndex='-1' top='74px' right='-438px' />
 
 
               <div style={{ width: '40%' }}>
@@ -214,7 +217,7 @@ function Home() {
                 <CardSelect w='284px' text='O que for melhor pra mim' htmlFor='economic03' margin='10px 100px 0 0' />
               </div>
 
-              <ImgElement src='/assets/element2.png' alt='imagem elemento 01' top='74px' right='29px' zIndex='0'/>
+              <ImgElement src='/assets/element2.png' alt='imagem elemento 01' top='74px' right='29px' zIndex='0' />
             </CardComponent>
 
             <CardComponent h='258px'>
@@ -227,7 +230,7 @@ function Home() {
                 <CardSelect w='284px' text='Não' htmlFor='no01' margin='10px 100px 0 0' />
               </div>
 
-              <ImgElement src='/assets/element03.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0'/>
+              <ImgElement src='/assets/element03.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0' />
             </CardComponent>
 
             <CardComponent h='272px'>
@@ -245,11 +248,54 @@ function Home() {
                 <InputComponent placeholder='Horário : do : treino' htmlFor='trainingTime' labelName='' w='284px' />
               </div>
 
-              <ImgElement src='/assets/element04.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0'/>
+              <ImgElement src='/assets/element04.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0' />
+            </CardComponent>
+
+            <CardComponent h='244px'>
+              <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}>
+                <Title02 style={{ marginBottom: '20px', marginRight: '22px' }} size='35px'>Comece agora!</Title02>
+                <Button w='313px' text='Clique aqui para ver sua dieta' />
+              </div>
+
             </CardComponent>
 
           </form>
         </Section02>
+
+        <Section03>
+          <form>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+              <ImgElement src='/assets/ellipse.svg' zIndex='-1' top='-100px' left='0' />
+              {/* <ImgElement src='/assets/fruits.svg.svg' zIndex='-1' top='93px'/> */}
+
+              <Title02 style={{ margin: '50px' }} color='var(--white)'>Conheça nossos planos </Title02>
+
+              <div style={{ display: 'flex' }}>
+
+                {arrayPlans.map((item) => (
+                  <CardComponent w='297px' h='574px' topBackground={true} hTop='152px' >
+
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                      <div style={{ zIndex: '1', height: '152px', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                        <Title02 color='var(--white)' size='30px' style={{ zIndex: '1' }} >{item.title}</Title02>
+                        <Title02 color='var(--white)' size='22px' style={{ zIndex: '1' }} >{item.people}</Title02>
+                      </div>
+
+                      <Title02 style={{ marginRight: '135px' }} size='30px'>R$</Title02>
+                      <Title02 size='70px'>{item.value}</Title02>
+                      <br />
+                      <TextPlans>{item.text}</TextPlans>
+
+                      <Button text='Começar agora' />
+                    </div>
+                  </CardComponent>
+                ))}
+
+              </div>
+
+            </div>
+          </form>
+        </Section03>
 
       </Content>
     </Container>

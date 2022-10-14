@@ -4,6 +4,7 @@ type Props = {
   h: string;
   w: string;
   br: string;
+  hTop?: string;
 }
 
 export const Container = styled.div<Props>`
@@ -24,8 +25,8 @@ export const Container = styled.div<Props>`
 
   .topBackground {
     position: absolute;
-    width: 958px;
-    height: 103px;
+    width: ${({ w }) => w};
+    height: ${({ hTop }) => hTop};
     top: 0;
     left: 0px;
 

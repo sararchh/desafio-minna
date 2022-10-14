@@ -4,11 +4,36 @@ type Props = {
   w?: string
 }
 
+type PropsImg = {
+  zIndex?: string,
+  marginTop?: string;
+  right?: string;
+  top?: string;
+  left?: string;
+  bottom?: string;
+}
+
+type PropsTitle = {
+  size?: string,
+  color?: string
+}
+
 export const Container = styled.div`
   width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
+`;
+
+export const ImgElement = styled.img<PropsImg>`
+  z-index: ${({ zIndex }) => zIndex ? zIndex : '1'};
+
+  position: absolute;
+  margin-top: ${({ marginTop }) => marginTop ? marginTop : ''};
+  right: ${({ right }) => right ? right : ''};
+  top: ${({ top }) => top ? top : ''};
+  bottom: ${({ bottom }) => bottom ? bottom : ''};
+  left: ${({ left }) => left ? left : ''};
 `;
 
 export const ImgElement01 = styled.img`
@@ -24,6 +49,7 @@ export const ImgElement01 = styled.img`
 export const Content = styled.div`
     max-width: 1292px;
     width: 1292px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,23 +96,19 @@ export const Section02 = styled.div`
   justify-content: center;
 `;
 
-type PropsImg = {
-  zIndex?: string,
-  marginTop?: string;
-  right?: string;
-  top?: string;
-  left?: string;
-}
+export const Section03 = styled.div`
+  max-width: 100vw;
+  width: 100vw;
+  height: auto;
 
-export const ImgElement = styled.img<PropsImg>`
-  z-index: ${({ zIndex }) => zIndex ? zIndex : '1'};
+  position: relative;
 
-  position: absolute;
-  margin-top: ${({ marginTop }) => marginTop ? marginTop : ''};
-  right: ${({ right }) => right ? right : ''};
-  top: ${({ top }) => top ? top : ''};
-  left: ${({ left }) => left ? left : ''};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
+
+
 
 export const Title01 = styled.h1`
   font-size: 25px;
@@ -94,9 +116,10 @@ export const Title01 = styled.h1`
   line-height: 30px;
 `;
 
-export const Title02 = styled.h1`
+export const Title02 = styled.h1<PropsTitle>`
   font-family: 'Gilroy-Bold', sans-serif;
-  font-size:'25px';
+  font-size: ${({size})=> size ? size : '25px'};
+  color: ${({color})=> color ? color : 'var(--black)'};
   margin: 10px;
   font-weight: 800;
   line-height: 30px;
@@ -170,4 +193,15 @@ export const ContainerDiet = styled.div`
   flex-direction: row;
   display: flex;
 
+`;
+
+export const TextPlans = styled.p`
+  font-family: 'Gilroy-Light', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+  padding: 15px;
+
+  margin-bottom: 20px;
 `;
