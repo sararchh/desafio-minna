@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type Props = {
+  w?: string
+}
+
 export const Container = styled.div`
   width: 100vw;
   display: flex;
@@ -32,6 +36,12 @@ export const Content = styled.div`
       width: 100vw;
       height: 370px;
     }
+
+    .positionButton {
+      position: absolute;
+      top: 340px;
+      right: 0;
+  }
     
   `;
 
@@ -60,36 +70,22 @@ export const Section02 = styled.div`
   justify-content: center;
 `;
 
-export const ImgElement02 = styled.img`
-  z-index: 1;
+type PropsImg = {
+  zIndex?: string,
+  marginTop?: string;
+  right?: string;
+  top?: string;
+  left?: string;
+}
+
+export const ImgElement = styled.img<PropsImg>`
+  z-index: ${({ zIndex }) => zIndex ? zIndex : '1'};
 
   position: absolute;
-  margin-top: -503px;
-  right: -437px;
-`;
-
-export const ImgElement03 = styled.img`
-  z-index: 1;
-
-  top: -127px;
-  position: absolute;
-  left: -150px;
-`;
-
-export const ImgElement05 = styled.img`
-  z-index: 1;
-  
-  top: 158px;
-  position: absolute;
-  right: -441px;
-`;
-
-export const ImgElement04 = styled.img`
-    z-index: -1;
-
-    position: absolute;
-    top: -134px;
-    left: -457px;
+  margin-top: ${({ marginTop }) => marginTop ? marginTop : ''};
+  right: ${({ right }) => right ? right : ''};
+  top: ${({ top }) => top ? top : ''};
+  left: ${({ left }) => left ? left : ''};
 `;
 
 export const Title01 = styled.h1`
@@ -100,7 +96,8 @@ export const Title01 = styled.h1`
 
 export const Title02 = styled.h1`
   font-family: 'Gilroy-Bold', sans-serif;
-  font-size: 25px;
+  font-size:'25px';
+  margin: 10px;
   font-weight: 800;
   line-height: 30px;
 `;
@@ -140,8 +137,8 @@ export const LabelStyled = styled.label`
   margin: 5px;
 `;
 
-export const SelectStyled = styled.select`
-  width: 346px;
+export const SelectStyled = styled.select<Props>`
+  width: ${({ w }) => w ? w : '346px'};
   height: 42px;
 
   box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.09);
@@ -149,13 +146,13 @@ export const SelectStyled = styled.select`
   border: none;
   outline: none;
 
-  color: var(--gray);
+  color: ${({ color }) => color ? color : 'var(--gray)'};
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   padding: 0 10px;
 
-  margin: 10px;
+  margin: 10px 0 0 0;
 
   option {
     color: var(--gray);
@@ -166,7 +163,7 @@ export const SelectStyled = styled.select`
 
 `;
 
-export const ContainerDiet =  styled.div`
+export const ContainerDiet = styled.div`
   width: 466px;
 
   flex-wrap: wrap;

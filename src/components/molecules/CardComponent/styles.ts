@@ -33,4 +33,5 @@ export const Container = styled.div<Props>`
     box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.09);
     border-radius: 50px 50px 0px 0px;
   }
+
 `;

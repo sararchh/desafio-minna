@@ -15,7 +15,7 @@ export const LabelStyled = styled.label`
   font-size: 16px;
   font-weight: 800;
   line-height: 20px;
-  margin: 0 0 5px 30px;
+  margin: 0 0 5px 20px;
 `;
 
 export const Input = styled.input<InputProps>`
@@ -36,7 +36,11 @@ export const Input = styled.input<InputProps>`
 
   color: var(--gray); 
 
+  position: relative;
+
   ::placeholder{
     font-size: 16px;
   }
+
+  
 `;

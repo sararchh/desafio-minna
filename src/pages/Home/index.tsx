@@ -1,9 +1,12 @@
 import React from 'react';
 import Button from '../../components/atoms/Button';
+import CardSelect from '../../components/atoms/CardSelect';
 import InputComponent from '../../components/atoms/InputComponent';
 import CardComponent from '../../components/molecules/CardComponent';
 import CardDiet from '../../components/molecules/CardDiet';
 import Header from '../../components/molecules/Header';
+import { array } from '../../utils/arrayDiet';
+import { arrayRestrictionDiet } from '../../utils/arrayRestrictionDiet';
 
 
 import {
@@ -11,57 +14,17 @@ import {
   Content,
   ContentStartNow,
   ImgElement01,
-  ImgElement02,
-  ImgElement03,
-  ImgElement04,
-  ImgElement05,
+  ImgElement,
   Section02,
   Title01,
   Title02,
   CardUser01,
   LabelStyled,
   SelectStyled,
-  ContainerDiet
+  ContainerDiet,
 } from './styles';
 
-const array = [
-  {
-    text: 'Equilibrada',
-    htmlFor: 'balanced'
-  },
-  {
-    text: 'Paleolítico',
-    htmlFor: 'paleolithic'
-  },
-  {
-    text: 'Cetogênica',
-    htmlFor: 'ketogenic'
-  },
-  {
-    text: 'Vegetariana',
-    htmlFor: 'vegetarian'
-  },
-  {
-    text: 'Jejum',
-    htmlFor: 'fast'
-  },
-  {
-    text: 'Sem Lactose',
-    htmlFor: 'lactoseFree'
-  },
-  {
-    text: 'Vegana',
-    htmlFor: 'vegan'
-  },
-  {
-    text: 'Low Carb',
-    htmlFor: 'lowCarb'
-  },
-  {
-    text: 'Sem Lactose',
-    htmlFor: 'lactoseFree2'
-  }
-]
+
 
 function Home() {
   return (
@@ -75,97 +38,104 @@ function Home() {
 
           <ContentStartNow>
             <p>Planejamos <br /> tudo para você!</p>
-            <Button text='Começar agora' />
+            <Button text='Enviar' />
           </ContentStartNow>
         </section>
 
         <Section02>
           <form>
             <CardComponent>
-              <ImgElement02 src='/assets/kiwi-fruit1.svg' alt='ImgElement02' />
-              <Title01>Olá! <br /> Precisamos conhecer <br /> um pouco sobre de você:</Title01>
+              <ImgElement src='/assets/kiwi-fruit1.svg' alt='ImgElement' marginTop='-503px' right='-437px' />
+              <div style={{ width: '40%' }}>
+                <Title01>Olá! <br /> Precisamos conhecer <br /> um pouco sobre de você:</Title01>
+              </div>
 
-              <CardUser01>
-                <div className='cardCheck'>
-                  <div>
-                    <input type="radio" id="masculine" name="fav_language" value="sexo" />
-                    <LabelStyled htmlFor="masculine">Homem</LabelStyled>
+              <div style={{ width: '40%' }}>
+                <CardUser01>
+                  <div className='cardCheck'>
+                    <div>
+                      <input type="radio" id="masculine" name="fav_language" value="sexo" />
+                      <LabelStyled htmlFor="masculine">Homem</LabelStyled>
+                    </div>
+
+                    <div>
+                      <input type="radio" id="female" name="fav_language" value="sexo" />
+                      <LabelStyled htmlFor="female">Mulher</LabelStyled>
+                    </div>
                   </div>
 
                   <div>
-                    <input type="radio" id="female" name="fav_language" value="sexo" />
-                    <LabelStyled htmlFor="female">Mulher</LabelStyled>
+                    <InputComponent
+                      htmlFor='name'
+                      labelName='Nome'
+                      type='text'
+                      placeholder='Priscila'
+                    />
+
+
+                    <InputComponent
+                      htmlFor='lastName'
+                      labelName='Sobrenome'
+                      type='text'
+                      placeholder='Meireles'
+                    />
                   </div>
-                </div>
-
-                <div>
-                  <InputComponent
-                    htmlFor='name'
-                    labelName='Nome'
-                    type='text'
-                    placeholder='Priscila'
-                  />
-
 
                   <InputComponent
-                    htmlFor='lastName'
-                    labelName='Sobrenome'
-                    type='text'
-                    placeholder='Meireles'
-                  />
-                </div>
-
-                <InputComponent
-                  htmlFor='birthDate'
-                  labelName='Data de Nascimento'
-                  type='date'
-                  w='346px'
-                />
-
-                <div>
-                  <InputComponent
-                    htmlFor='weight'
-                    labelName='Peso'
-                    type='text'
-                    placeholder='55kg'
+                    htmlFor='birthDate'
+                    labelName='Data de Nascimento'
+                    type='date'
+                    w='346px'
                   />
 
-                  <InputComponent
-                    htmlFor='height'
-                    labelName='Altura'
-                    type='text'
-                    placeholder='1,67m'
-                  />
-                </div>
+                  <div>
+                    <InputComponent
+                      htmlFor='weight'
+                      labelName='Peso'
+                      type='text'
+                      placeholder='55kg'
+                    />
 
-                <LabelStyled className='labelMargin'>
-                  Nível de gordura corporal
-                </LabelStyled>
-                <SelectStyled>
-                  <option value="bom">Bom (16 a 19%)</option>
-                  <option value="moderate">Moderado (22 a 35%)</option>
-                  <option value="high">Elevado (32 a 34%)</option>
-                </SelectStyled>
+                    <InputComponent
+                      htmlFor='height'
+                      labelName='Altura'
+                      type='text'
+                      placeholder='1,67m'
+                    />
+                  </div>
 
-              </CardUser01>
+                  <LabelStyled className='labelMargin'>
+                    Nível de gordura corporal
+                  </LabelStyled>
+                  <SelectStyled>
+                    <option value="bom">Bom (16 a 19%)</option>
+                    <option value="moderate">Moderado (22 a 35%)</option>
+                    <option value="high">Elevado (32 a 34%)</option>
+                  </SelectStyled>
 
+                </CardUser01>
+              </div>
 
             </CardComponent>
 
             <CardComponent h='186px'>
-              <Title02>Qual é o seu <br /> objetivo principal?</Title02>
+              <div style={{ width: '40%' }}>
+                <Title02>Qual é o seu <br /> objetivo principal?</Title02>
+              </div>
 
-              <SelectStyled>
-                <option value="loseWeight">Emagrecer</option>
-                <option value="keepWeight">Manter Peso</option>
-                <option value="gainHealth">Ganhar saúde</option>
-                <option value="gainMass">Ganhar massa muscular</option>
-              </SelectStyled>
+              <div style={{ width: '40%' }}>
+                <SelectStyled>
+                  <option value="loseWeight">Emagrecer</option>
+                  <option value="keepWeight">Manter Peso</option>
+                  <option value="gainHealth">Ganhar saúde</option>
+                  <option value="gainMass">Ganhar massa muscular</option>
+                </SelectStyled>
+              </div>
             </CardComponent>
 
             <CardComponent h='672px' topBackground={true} >
-              <ImgElement03 src='/assets/gluten-free1.png' alt='imagem gluten' />
-              <ImgElement04 src='/assets/v.svg' alt='imagem' />
+              <ImgElement src='/assets/gluten-free1.png' alt='imagem gluten' top='-127px' left='-150px' />
+              <ImgElement src='/assets/v.svg' alt='imagem' zIndex='-1' top='-134px' left='-457px'/>
 
               <Title02>Qual tipo de dieta <br /> você gostaria?</Title02>
 
@@ -175,7 +145,107 @@ function Home() {
                 ))}
               </ContainerDiet>
 
-              <ImgElement05 src='/assets/diet01.svg' alt='Comidas' />
+              <ImgElement src='/assets/diet01.svg' alt='Comidas' top='158px' right='-441px' />
+            </CardComponent>
+
+            <CardComponent h='201px'>
+              <ImgElement src='/assets/cogumelos.svg' alt='imagem cogumelo' top='86px' left='-361px' zIndex='0'/>
+              <div style={{ width: '40%' }}>
+                <Title02>Quantas refeições <br /> você faz ao dia?</Title02>
+              </div>
+
+              <div style={{ width: '40%' }}>
+                <SelectStyled color='var(--black)'>
+                  <option value="Meals01">01 Refeições</option>
+                  <option value="Meals02">02 Refeições</option>
+                  <option value="Meals03">03 Refeições</option>
+                </SelectStyled>
+              </div>
+            </CardComponent>
+
+            <CardComponent h='460px'>
+              <ImgElement src='/assets/tomato.svg' alt='imagem tomate' zIndex='0' top='29px' left='-457px'/>
+              <ImgElement src='/assets/ingredients.svg' alt='imagem ingredientes' zIndex='-1' top='271px' right='-439px' />
+
+              <div style={{ width: '40%' }}>
+                <Title02>Você tem alguma <br /> restrição alimentar?</Title02>
+              </div>
+
+              <div style={{ width: '50%' }}>
+                <ContainerDiet>
+                  {arrayRestrictionDiet.map((item) => (
+                    <CardSelect text={item.text} htmlFor={item.htmlFor} margin='10px' />
+                  ))}
+                </ContainerDiet>
+
+                <InputComponent htmlFor='inputRestrictionDiet' labelName='Adicione sua próprias restrições' placeholder='Digite aqui...' w='429px' />
+                <span className='positionButton'>
+                  <Button text='Enviar' w='102px' />
+                </span>
+              </div>
+            </CardComponent>
+
+            <CardComponent h='258px'>
+              <div style={{ width: '40%' }}>
+                <Title02>Nível de dificuldade <br /> da dieta:</Title02>
+              </div>
+
+              <div style={{ zIndex: '9', width: '40%' }}>
+                <CardSelect w='284px' text='Sem nenhum preparo' htmlFor='preparation0' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='Com preparos rápidos' htmlFor='preparation1' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='Gosto de cozinhar' htmlFor='preparation2' margin='10px 100px 0 0' />
+              </div>
+
+              <ImgElement src='/assets/elemento1.svg' alt='imagem elemento 01' top='74px' right='29px' zIndex='0'/>
+            </CardComponent>
+
+            <CardComponent h='258px'>
+              <ImgElement src='/assets/pizza.svg' alt='imagem elemento 01' top='74px' left='-457px' zIndex='0'/>
+              <ImgElement src='/assets/m.svg' alt='imagem elemento 01' zIndex='-1' top='74px' right='-438px'/>
+
+
+              <div style={{ width: '40%' }}>
+                <Title02>Investimento <br /> na dieta:</Title02>
+              </div>
+
+              <div style={{ zIndex: '9', width: '40%' }}>
+                <CardSelect w='284px' text='Econômica' htmlFor='economic01' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='Moderadamente econômica' htmlFor='economic02' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='O que for melhor pra mim' htmlFor='economic03' margin='10px 100px 0 0' />
+              </div>
+
+              <ImgElement src='/assets/element2.png' alt='imagem elemento 01' top='74px' right='29px' zIndex='0'/>
+            </CardComponent>
+
+            <CardComponent h='258px'>
+              <div style={{ width: '40%' }}>
+                <Title02>Gostaria de utilizar <br /> suplementos esportivos?</Title02>
+              </div>
+
+              <div style={{ zIndex: '9', width: '40%' }}>
+                <CardSelect w='284px' text='Sim' htmlFor='yes01' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='Não' htmlFor='no01' margin='10px 100px 0 0' />
+              </div>
+
+              <ImgElement src='/assets/element03.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0'/>
+            </CardComponent>
+
+            <CardComponent h='272px'>
+              <div style={{ width: '40%' }}>
+                <Title02>Você pratica <br /> exercícios físicos?</Title02>
+              </div>
+
+              <div style={{ zIndex: '9', width: '40%' }}>
+                <CardSelect w='284px' text='Sim' htmlFor='yes02' margin='10px 100px 0 0' />
+                <CardSelect w='284px' text='Não' htmlFor='no03' margin='10px 100px 0 0' />
+                <SelectStyled w='284px'>
+                  <option value="Meals01">BMX; mountain-bike  8,5</option>
+                </SelectStyled>
+
+                <InputComponent placeholder='Horário : do : treino' htmlFor='trainingTime' labelName='' w='284px' />
+              </div>
+
+              <ImgElement src='/assets/element04.svg' alt='imagem elemento 03' top='74px' right='29px' zIndex='0'/>
             </CardComponent>
 
           </form>

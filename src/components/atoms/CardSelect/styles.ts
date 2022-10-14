@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 135px;
+type ContainerProps = {
+  margin: string,
+  w?: string,
+}
+
+export const Container = styled.div<ContainerProps>`
+  width: ${({ w }) => w};
   height: 42px;
 
   background: var(--white);
@@ -10,7 +15,10 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+
+  margin: ${({ margin }) => margin};
 
   input[type="radio"]:checked{
     accent-color: var(--orange2);
