@@ -114,7 +114,7 @@ export const SectionCard = styled.section`
 
   .divStyled03 {
     z-index: 1;
-    height: 152px;
+    height: 104px;
     margin-bottom: 50px;
   }
 
@@ -127,7 +127,7 @@ export const SectionCard = styled.section`
   }
 
   .TitleStyled02 {
-    margin-right: '135px'
+    margin-right: 135px
   }
 
   
@@ -261,7 +261,7 @@ export const CardContents = styled.div`
   background-color: var(--orange);
 
   span {
-    top: 25px;
+    top: 27px;
     right: 29px;
     position: absolute;
   }

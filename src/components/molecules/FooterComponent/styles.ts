@@ -39,6 +39,7 @@ export const Container = styled.div`
 
   .divStyled02 {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
