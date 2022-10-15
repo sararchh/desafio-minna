@@ -37,7 +37,7 @@ export const Container = styled.div`
     margin-top: 15px;
   }
 
-  .divStyled02 {
+  .divStyled05 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

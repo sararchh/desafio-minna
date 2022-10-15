@@ -112,7 +112,7 @@ function Home() {
                   <LabelStyled className='labelMargin'>
                     Nível de gordura corporal
                   </LabelStyled>
-                  <SelectStyled>
+                  <SelectStyled marginTop='3px'>
                     <option value="bom">Bom (16 a 19%)</option>
                     <option value="moderate">Moderado (22 a 35%)</option>
                     <option value="high">Elevado (32 a 34%)</option>
@@ -282,7 +282,7 @@ function Home() {
                     <div className='divStyled02'>
                       <div className='divStyled02 divStyled03'>
                         <Title02 color='var(--white)' size='30px' className='divZIndex' >{item.title}</Title02>
-                        <Title02 color='var(--white)' size='22px' className='divZIndex' margin='0 0 10px 0' >{item.people}</Title02>
+                        <Title02 color='var(--white)' size='22px' className='divZIndex' margin='-5px 0 10px 0' >{item.people}</Title02>
                       </div>
 
                       <Title02 className='TitleStyled02' size='30px'>R$</Title02>

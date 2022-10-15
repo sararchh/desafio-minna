@@ -58,7 +58,7 @@ const FooterComponent: React.FC = () => {
       </section>
       <hr />
 
-      <div className='divStyled02' >
+      <div className='divStyled05' >
         <p>© Nutri Alimentar. Todos os Direitos Reservados. </p>
         <p >Desenvolvido por <span className='colorText'> Driftweb</span> </p>
       </div>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type Props = {
   w?: string
+  marginTop?: string
 }
 
 type PropsImg = {
@@ -66,7 +67,7 @@ export const Content = styled.div`
 
     .positionButton {
       position: absolute;
-      top: 340px;
+      top: 342px;
       right: 0;
   }
     
@@ -162,12 +163,13 @@ export const CardUser01 = styled.div`
   }
 
   .labelMargin {
-    margin: 0 0 5px 30px;
+    margin: 10px 0 5px 25px;
   }
 
   .cardCheck {
     justify-content: space-between;
-    margin: 0 40px;
+    margin: 0 17px;
+    margin-right: 87px;
   }
 
    input[type="radio"]:checked{
@@ -199,7 +201,7 @@ export const SelectStyled = styled.select<Props>`
   line-height: 20px;
   padding: 0 10px;
 
-  margin-top: 10px;
+  margin-top: ${({ marginTop }) => marginTop ? marginTop : '10px' };
 
   option {
     color: var(--gray);
