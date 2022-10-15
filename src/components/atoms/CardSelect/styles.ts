@@ -16,7 +16,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 20px;
+  padding-left: 15px;
 
   margin: ${({ margin }) => margin};
 

@@ -86,7 +86,7 @@ export const ContentStartNow = styled.div`
 }
 `;
 
-export const SectionCard = styled.div`
+export const SectionCard = styled.section`
   max-width: 100vw;
   width: 100vw;
   height: auto;
@@ -96,6 +96,41 @@ export const SectionCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .divStyled {
+    width: 40%;
+  }
+
+  .divStyled01 {
+    display: flex;
+  }
+
+  .divStyled02{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .divStyled03 {
+    z-index: 1;
+    height: 152px;
+    margin-bottom: 50px;
+  }
+
+  .divZIndex {
+    z-index: '9'
+  }
+
+  .TitleStyled {
+    margin: 50px;
+  }
+
+  .TitleStyled02 {
+    margin-right: '135px'
+  }
+
+  
 `;
 
 export const Title01 = styled.h1`
@@ -106,8 +141,8 @@ export const Title01 = styled.h1`
 
 export const Title02 = styled.h1<PropsTitle>`
   font-family: 'Gilroy-Bold', sans-serif;
-  font-size: ${({size})=> size ? size : '25px'};
-  color: ${({color})=> color ? color : 'var(--black)'};
+  font-size: ${({ size }) => size ? size : '25px'};
+  color: ${({ color }) => color ? color : 'var(--black)'};
   margin: 10px;
   font-weight: 800;
   line-height: 30px;
@@ -163,7 +198,7 @@ export const SelectStyled = styled.select<Props>`
   line-height: 20px;
   padding: 0 10px;
 
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 
   option {
     color: var(--gray);
@@ -201,6 +236,7 @@ export const ContentFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   background-color: var(--white);
 
