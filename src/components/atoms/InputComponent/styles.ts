@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 type InputProps = {
-  w: string;
+  w?: string;
+  mg?: string;
 }
 
 export const Container = styled.div`
@@ -10,12 +11,12 @@ export const Container = styled.div`
  margin-top: 6px;
 `;
 
-export const LabelStyled = styled.label`
+export const LabelStyled = styled.label<InputProps>`
  font-family: 'Gilroy-Bold', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 20px;
-  margin: 0 0 5px 20px;
+  margin: ${({mg})=> mg ? mg : '0 0 5px 20px'};
 `;
 
 export const Input = styled.input<InputProps>`

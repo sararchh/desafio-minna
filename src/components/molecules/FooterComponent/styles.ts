@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   width: 1289px;
   height: 328px;
   margin-top: 50px;
+
+  position: absolute;
+  bottom: -530px;
   
   hr {
     width: 1289px;

@@ -8,6 +8,7 @@ type InputComponentProps = {
   type?: string,
   placeholder?: string,
   w?: string,
+  mg?: string,
 }
 
 const InputComponent: React.FC<InputComponentProps> = (
@@ -16,12 +17,13 @@ const InputComponent: React.FC<InputComponentProps> = (
     labelName,
     type = 'text',
     placeholder,
-    w = '167px'
+    w = '167px',
+    mg
   }
 ) => {
   return (
     <Container>
-      <LabelStyled htmlFor={htmlFor}>{labelName}</LabelStyled>
+      <LabelStyled htmlFor={htmlFor} mg={mg}>{labelName}</LabelStyled>
       <Input type={type} id={htmlFor} name={htmlFor} placeholder={placeholder} w={w}/>
     </Container>
   );

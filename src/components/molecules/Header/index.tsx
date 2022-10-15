@@ -1,5 +1,6 @@
 import React from 'react';
-import  Button  from '../../atoms/Button';
+import { Link } from 'react-router-dom';
+import Button from '../../atoms/Button';
 
 import { Container, ContentInfo, } from './styles';
 
@@ -17,13 +18,15 @@ const Header: React.FC = () => {
 
       <div>
 
-        <Button
-        text='Inscreva-se'
-        borderColor='#FFFFFF' 
-        />
+        <Link to='/signup'>
+          <Button
+            text='Inscreva-se'
+            borderColor='#FFFFFF'
+          />
+        </Link>
 
         <Button
-        text='Login'
+          text='Login'
         />
 
       </div>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export type Props = {
   borderColor?: string,
   w?: string,
+  color?: string,
 }
 
 export const ButtonStyled = styled.button<Props>`
@@ -10,7 +11,7 @@ export const ButtonStyled = styled.button<Props>`
   width: ${({ w }) => w};
 
   border-radius: 50px;
-  background:  var(--orange);
+  background:  ${({ color }) => color ? color : 'var(--orange)'};
   border: 2px solid ${({ borderColor }) => borderColor ? borderColor : 'var(--orange)'};
 
   color: var(--white);

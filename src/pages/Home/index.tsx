@@ -7,6 +7,7 @@ import CardDiet from '../../components/molecules/CardDiet';
 import FooterComponent from '../../components/molecules/FooterComponent';
 import Header from '../../components/molecules/Header';
 import ModalPWA from '../../components/molecules/ModalPWA';
+import MainTemplate from '../../components/templates/MainTemplate';
 import { array } from '../../utils/arrayDiet';
 import { arrayPlans } from '../../utils/arrayPlans';
 import { arrayRestrictionDiet } from '../../utils/arrayRestrictionDiet';
@@ -42,16 +43,14 @@ function Home() {
   }, [])
 
   return (
-    <Container>
+    <MainTemplate>
       <Content>
 
-        <Header />
         {openModalPWA && (
-          <ModalPWA onClose={()=>setOpenModalPWA(false)} />
+          <ModalPWA onClose={() => setOpenModalPWA(false)} />
         )}
 
         <section className='section01'>
-          <ImgElement01 src='/assets/u-orange.svg' alt='elemento01' />
 
           <ContentStartNow>
             <p>Planejamos <br /> tudo para você!</p>
@@ -314,7 +313,7 @@ function Home() {
         </SectionCard>
 
         <SectionCard>
-          <ContentFooter className='teste'>
+          <ContentFooter>
 
             <CardContents>
               <Title02 size='25px' color='var(--white)'>Receba conteúdos exclusívos!</Title02>
@@ -325,13 +324,11 @@ function Home() {
               </span>
             </CardContents>
 
-            <FooterComponent />
-
           </ContentFooter>
         </SectionCard>
-
       </Content>
-    </Container>
+
+    </MainTemplate>
   );
 }
 

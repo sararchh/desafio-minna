@@ -232,13 +232,12 @@ export const TextPlans = styled.p`
   margin-bottom: 20px;
 `;
 
-export const ContentFooter = styled.footer`
+export const ContentFooter = styled.div`
   width: 100%;
   height: 687px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 
   background-color: var(--white);
@@ -259,6 +258,8 @@ export const CardContents = styled.div`
   justify-content: center;
   
   position: relative;
+
+  margin-top: 100px;
 
   border-radius: 50px;
   background-color: var(--orange);
