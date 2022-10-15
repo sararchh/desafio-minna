@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../components/atoms/Button';
 import CardSelect from '../../components/atoms/CardSelect';
 import InputComponent from '../../components/atoms/InputComponent';
@@ -6,6 +6,7 @@ import CardComponent from '../../components/molecules/CardComponent';
 import CardDiet from '../../components/molecules/CardDiet';
 import FooterComponent from '../../components/molecules/FooterComponent';
 import Header from '../../components/molecules/Header';
+import ModalPWA from '../../components/molecules/ModalPWA';
 import { array } from '../../utils/arrayDiet';
 import { arrayPlans } from '../../utils/arrayPlans';
 import { arrayRestrictionDiet } from '../../utils/arrayRestrictionDiet';
@@ -32,11 +33,22 @@ import {
 
 
 function Home() {
+  const [openModalPWA, setOpenModalPWA] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setOpenModalPWA(true);
+    }, 2000)
+  }, [])
+
   return (
     <Container>
       <Content>
 
         <Header />
+        {openModalPWA && (
+          <ModalPWA onClose={()=>setOpenModalPWA(false)} />
+        )}
 
         <section className='section01'>
           <ImgElement01 src='/assets/u-orange.svg' alt='elemento01' />
@@ -269,7 +281,7 @@ function Home() {
         <SectionCard>
           <form>
             <div className='divStyled02' >
-              <ImgElement src='/assets/ellipse.svg'zIndex='-1' style={{ width: '100vw' }} top='-100px' left='0' />
+              <ImgElement src='/assets/ellipse.svg' zIndex='-1' style={{ width: '100vw' }} top='-100px' left='0' />
               <ImgElement style={{ width: '100vw' }} src='/assets/fruits.svg' zIndex='-1' top='460px' left='0' />
 
               <Title02 className='TitleStyled' color='var(--white)'>Conheça nossos planos </Title02>

@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
   --background:  #E5E5E5;
+  --background02: #3E3E3E99;
   --orange: #F87D50;
   --orange2: #df7752;
   --black: #1F1F1F;
@@ -43,6 +44,9 @@ body{
 body, input, textarea, button {
  font-family: 'Rubik', sans-serif;
   font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
