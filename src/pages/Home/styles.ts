@@ -15,7 +15,8 @@ type PropsImg = {
 
 type PropsTitle = {
   size?: string,
-  color?: string
+  color?: string,
+  margin?: string
 }
 
 export const Container = styled.div`
@@ -119,7 +120,7 @@ export const SectionCard = styled.section`
   }
 
   .divZIndex {
-    z-index: '9'
+    z-index: 9
   }
 
   .TitleStyled {
@@ -143,7 +144,7 @@ export const Title02 = styled.h1<PropsTitle>`
   font-family: 'Gilroy-Bold', sans-serif;
   font-size: ${({ size }) => size ? size : '25px'};
   color: ${({ color }) => color ? color : 'var(--black)'};
-  margin: 10px;
+  margin: ${({margin})=> margin ? margin : ' 10px'};
   font-weight: 800;
   line-height: 30px;
 `;
