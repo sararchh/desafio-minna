@@ -1,7 +1,3 @@
-## 💻 Projeto
-
-Este projeto é uma aplicação em REACTJS com TypeScript, para estilização foi utilizado Styled-Components e React Icons para adicionar os Icones.
-
 <h2  align="center">
 
 <img  alt="cover-alt"  src=".github/image.png" />
@@ -22,45 +18,24 @@ Este projeto é uma aplicação em REACTJS com TypeScript, para estilização fo
 </p>
 
   
-
-  
-
 ## 💻 Projeto
 
-  
 
-Este projeto é uma aplicação ReactJS NextJS com typescript desafio da rocketseat ignite aplicação space traveling de blog de postagens;
+Este projeto é uma aplicação em REACTJS com TypeScript, para estilização foi utilizado Styled-Components e React Icons para adicionar os Icones.
 
-  
 
 ## 🧪 Tecnologias
 
-  
-  
 
 O projeto foi desenvolvido usando as seguintes tecnologias:
-
-  
-
   
 
 - [React](https://reactjs.org)
-
-  
-
 - [Next.js](https://nextjs.org)
-
-  
-
 - [TypeScript](https://www.typescriptlang.org)
+- [Styled-Components](https://styled-components.com/)
+- [React-Icons](https://react-icons.github.io/react-icons/)
 
-  
-
-- [Styled-Components]([styled-components](https://styled-components.com/))
-
- 
-
-  
 
 ## 📝 Scripts
 
