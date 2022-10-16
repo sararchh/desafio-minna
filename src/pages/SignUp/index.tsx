@@ -15,8 +15,8 @@ const SignUp: React.FC = () => {
       <Content>
         <ImageElement src='/assets/pizza2.png' alt='pizza'  top='365px' left='-30px' zIndex='9'/>
         <ImageElement src='/assets/v.svg' alt='elemento' top='296px' left='-287px' />
-        <ImageElement src='/assets/cogumelos.svg' alt='elemento' top='518px' right='-21px' />
-        <ImageElement src='/assets/tomato2.svg' alt='elemento' top='691px' right='-30px' zIndex='9'/>
+        <ImageElement src='/assets/cogumelos.png' alt='elemento' top='518px' right='-21px' />
+        <ImageElement src='/assets/tomato2.png' alt='elemento' top='691px' right='-30px' zIndex='9'/>
         
 
         <CardComponent w='958px' h='1109px'>

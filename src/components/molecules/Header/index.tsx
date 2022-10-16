@@ -10,10 +10,10 @@ const Header: React.FC = () => {
       <img src='./assets/Logo.svg' alt='Logo' />
 
       <ContentInfo>
-        <p>Como Fazemos</p>
-        <p>Planos e Preços</p>
-        <p>Receitas</p>
-        <p>Sobre Nós</p>
+        <a href="#">Como Fazemos</a>
+        <a href="#">Planos e Preços</a>
+        <a href="#">Receitas</a>
+        <a href="#">Sobre Nós</a>
       </ContentInfo>
 
       <div>

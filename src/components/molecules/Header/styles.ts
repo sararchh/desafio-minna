@@ -13,11 +13,13 @@ export const ContentInfo = styled.div`
   display: flex;
   margin: 0 10px 0 100px;
 
-  p {
+  a {
     font-size: 16px;
     font-weight: 700;
     line-height: 19px;
     text-align: left;
     margin: 0 10px;
+    cursor: pointer;
+    color: var(--black);
   }
 `;

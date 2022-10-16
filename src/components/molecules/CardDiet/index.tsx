@@ -13,7 +13,7 @@ const CardDiet: React.FC<CardDietProps> = ({text, htmlFor }) => {
   return (
     <Container>
       <CardComponent w='135px' h='135px' br='30px' >
-        <Image src="/assets/broccoli.svg" alt="brócolis" />
+        <Image src="/assets/broccoli.png" alt="brócolis" />
       </CardComponent>
       <CarSelect text={text} htmlFor={htmlFor}/>
     </Container>

@@ -61,7 +61,7 @@ function Home() {
         <SectionCard>
           <form>
             <CardComponent>
-              <ImgElement src='/assets/kiwi-fruit1.svg' alt='ImgElement' marginTop='-503px' right='-437px' />
+              <ImgElement src='/assets/kiwi-fruit1.png' alt='ImgElement' marginTop='-503px' right='-455px' />
               <div className='divStyled'>
                 <Title01>Olá! <br /> Precisamos conhecer <br /> um pouco sobre de você:</Title01>
               </div>
@@ -161,11 +161,11 @@ function Home() {
                 ))}
               </ContainerDiet>
 
-              <ImgElement src='/assets/diet01.svg' alt='Comidas' top='158px' right='-441px' />
+              <ImgElement src='/assets/diet01.png' alt='Comidas' top='158px' right='-460px' />
             </CardComponent>
 
             <CardComponent h='201px'>
-              <ImgElement src='/assets/cogumelos.svg' alt='imagem cogumelo' top='86px' left='-361px' zIndex='0' />
+              <ImgElement src='/assets/cogumelos.png' alt='imagem cogumelo' top='86px' left='-361px' zIndex='0' />
               <div className='divStyled'>
                 <Title02>Quantas refeições <br /> você faz ao dia?</Title02>
               </div>
@@ -180,8 +180,8 @@ function Home() {
             </CardComponent>
 
             <CardComponent h='460px'>
-              <ImgElement src='/assets/tomato.svg' alt='imagem tomate' zIndex='0' top='29px' left='-457px' />
-              <ImgElement src='/assets/ingredients.svg' alt='imagem ingredientes' zIndex='-1' top='271px' right='-439px' />
+              <ImgElement src='/assets/tomato.png' alt='imagem tomate' zIndex='0' top='29px' left='-457px' />
+              <ImgElement src='/assets/ingredients.png' alt='imagem ingredientes' zIndex='-1' top='271px' right='-458px' />
 
               <div className='divStyled'>
                 <Title02>Você tem alguma <br /> restrição alimentar?</Title02>
@@ -216,8 +216,8 @@ function Home() {
             </CardComponent>
 
             <CardComponent h='258px'>
-              <ImgElement src='/assets/pizza.svg' alt='imagem elemento 01' top='74px' left='-457px' zIndex='0' />
-              <ImgElement src='/assets/m.svg' alt='imagem elemento 01' zIndex='-1' top='74px' right='-438px' />
+              <ImgElement src='/assets/pizza2.png' alt='imagem elemento 01' top='74px' left='-500px' zIndex='0' />
+              <ImgElement src='/assets/m.svg' alt='imagem elemento 01' zIndex='-1' top='74px' right='-456px' />
 
 
               <div className='divStyled'>
@@ -281,7 +281,7 @@ function Home() {
           <form>
             <div className='divStyled02' >
               <ImgElement src='/assets/ellipse.svg' zIndex='-1' style={{ width: '100vw' }} top='-100px' left='0' />
-              <ImgElement style={{ width: '100vw' }} src='/assets/fruits.svg' zIndex='-1' top='460px' left='0' />
+              <ImgElement style={{ width: '100vw' }} src='/assets/fruits.png' zIndex='-1' top='460px' left='0' />
 
               <Title02 className='TitleStyled' color='var(--white)'>Conheça nossos planos </Title02>
 

@@ -99,6 +99,10 @@ export const SectionCard = styled.section`
   align-items: center;
   justify-content: center;
 
+  .creative-pos{
+    width: 100vw;
+  }
+
   .divStyled {
     width: 40%;
   }
